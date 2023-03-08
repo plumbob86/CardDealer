@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Your Hand</title>
+</head>
+<body>
+	<p th:text = "'Your hand is: ' + ${hand.hand}"/>
+	
+	<a href="/deal?choice=deal">Deal Cards again?</a>
+	<a th:href="@{'/deal?choice=save&savedHand=' + ${hand.hand}}">Save your hand?</a>
+</body>
+</html>
